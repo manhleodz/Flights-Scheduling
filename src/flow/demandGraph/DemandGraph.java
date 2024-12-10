@@ -17,20 +17,16 @@ public class DemandGraph {
 	public DemandGraph(HashMap<String, ArrayList<Route>> flightMap) {
 		graph = new HashMap<Vertex, List<Edge>>();
 		initializeAndRemoveLowerBounds(flightMap);
+		// System.out.println("initializeAndRemoveLowerBounds: " + graph);
 		solvable = true;
 		addMasterVertexes();
+		// System.out.println("addMasterVertexes: " + graph);
 	}
 
-	/**
-	 * @param flightMap
-	 */
-	private void initializeAndRemoveLowerBounds(
-			HashMap<String, ArrayList<Route>> flightMap) {
-
+	private void initializeAndRemoveLowerBounds(HashMap<String, ArrayList<Route>> flightMap) {
 		HashMap<String, Integer> demandChange = new HashMap<String, Integer>();
 
 		for (String key : flightMap.keySet()) {
-
 			ArrayList<Route> routes = flightMap.get(key);
 			Vertex v;
 			LinkedList<Edge> list = new LinkedList<Edge>();
@@ -47,10 +43,6 @@ public class DemandGraph {
 
 				list.add(edge);
 
-				/*
-				 * In case of a lower bound changes will have to be applied once
-				 * the graph has been created
-				 */
 				if (route.getLowerBound() == 1) {
 
 					edge.decreaseCapacity();
@@ -77,7 +69,6 @@ public class DemandGraph {
 
 		graph.put(new Vertex("T", Utils.PLANES_AVAILABLE), new LinkedList<Edge>());
 
-		/* Apply demand changes */
 		for (Vertex v : graph.keySet()) {
 			String s = v.getId();
 

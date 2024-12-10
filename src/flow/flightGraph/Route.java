@@ -5,13 +5,6 @@ public class Route {
 	private String dest;
 	private int lowerBound, capacity;
 
-	/**
-	 * Route constructor.
-	 * 
-	 * @param dest
-	 * @param lowerBound
-	 * @param capacity
-	 */
 	public Route(String dest, int lowerBound, int capacity) {
 		this.dest = dest;
 		this.lowerBound = lowerBound;

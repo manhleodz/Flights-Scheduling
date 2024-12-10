@@ -5,9 +5,6 @@ import flow.flightGraph.Graph;
 import flow.maxFlow.FlowNetwork;
 import flow.maxFlow.FordFulkerson;
 
-/**
- * Holds the main function, where the magic happens.
- */
 public class Main {
 
 	public static void main(String... args) {

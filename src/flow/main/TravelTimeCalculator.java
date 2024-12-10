@@ -11,7 +11,7 @@ public class TravelTimeCalculator {
 
     public void loadFromFile() {
         try (BufferedReader br = new BufferedReader(
-                new FileReader("/home/manhleo/Code/School/TURR/Flights_Scheduling_Max_Flow/travel_times.txt"))) {
+                new FileReader("/home/manhleo/Code/School/TURR/Flights Scheduling/travel_times.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(" ");

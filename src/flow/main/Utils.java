@@ -15,15 +15,8 @@ public class Utils {
 	public static int PLANES_AVAILABLE;
 	public static int MAINTENACE_TIME = 1;
 
-	public static final String FILENAME = "vietjet.txt";
+	public static final String FILENAME = "flights.txt";
 
-	/**
-	 * Reads the input file stored in Utils.FILENAME and returns all the flights
-	 * in an ArrayList.
-	 * 
-	 * @return - the flight bundle read
-	 * @throws Exception when any kind of read error happens.
-	 */
 	public static ArrayList<Flight> readFile() throws Exception {
 		ArrayList<Flight> flights = new ArrayList<Flight>();
 
